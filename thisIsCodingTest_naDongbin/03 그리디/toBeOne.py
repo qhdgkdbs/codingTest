@@ -6,7 +6,7 @@ def to_be_one(n, k):
             n -= 1
         else:
             cnt += 1
-            n //= k  #몫만 가져옴
+            n //= k  #몫만
 
     return cnt
 

@@ -26,9 +26,23 @@ def clock_count(n):
     return count
 
 
+def answer_clock_count(n):
+    count = 0
+    for i in range(n + 1):
+        for j in range(60):
+            for k in range(60):
+                if '3' in str(i) + str(j) + str(k):
+                    count += 1
+    return count
+
+
 if __name__ == '__main__':
     start = time.time()
     print(clock_count(24))
+    print(f"{time.time() - start:.10f} sec")
+
+    start = time.time()
+    print(answer_clock_count(24))
     print(f"{time.time() - start:.10f} sec")
 
 

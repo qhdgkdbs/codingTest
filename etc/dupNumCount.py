@@ -7,10 +7,10 @@ def dup_num_count(arr):
             count.append(cnt)
 
     if not count:
-        print("-1")
-    print(count)
+        return -1
+    return count
 
 
 if __name__ == '__main__':
     arr = [3, 2, 4]
-    dup_num_count(arr)
+    print(dup_num_count(arr))

@@ -56,13 +56,6 @@ def game(size, now, data):
 ###############################################################
 
 
-def turn_left():
-    global direction
-    direction -= 1
-    if direction == -1:
-        direction = 3
-
-
 def answer_game(size, now, data):
     n, m = size
     d = [[0] * m for _ in range(n)]
@@ -77,7 +70,10 @@ def answer_game(size, now, data):
     count = 1
     turn_time = 0
     while 1:
-        turn_left()
+        direction -= 1
+        if direction == -1:
+            direction = 3
+
         nx = x + dx[direction]
         ny = y + dy[direction]
 
@@ -102,10 +98,7 @@ def answer_game(size, now, data):
                 break
             turn_time = 0
 
-    print(count)
-
-
-    return result
+    return count
 
 
 if __name__ == '__main__':

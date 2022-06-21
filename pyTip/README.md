@@ -93,7 +93,32 @@
 ```"hello".isalpha()``` <br/>
 ```"0123".isdigit()``` <br/>
 ```"0sdf0df".isalnum() # 문자 또는 숫자```
-  
+
+
+### global 선언자
+* 함수 안에서 전역 변수 변경하기
+<pre><code>
+x = 10          # 전역 변수
+def foo():
+    global x    # 전역 변수 x를 사용하겠다고 설정
+    x = 20      # x는 전역 변수
+    print(x)    # 전역 변수 출력
+ 
+foo()
+print(x)        # 전역 변수 출력
+</code></pre>
+
+* 함수 안에서 global을 사용하면 해당 변수는 전역 변수가 됨.
+<pre><code>
+# 전역 변수 x가 없는 상태
+def foo():
+    global x    # x를 전역 변수로 만듦
+    x = 20      # x는 전역 변수
+    print(x)    # 전역 변수 출력
+ 
+foo()
+print(x)        # 전역 변수 출력
+</code></pre>
 
 
 

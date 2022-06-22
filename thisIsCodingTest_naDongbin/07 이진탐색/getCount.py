@@ -1,4 +1,5 @@
 import time
+from bisect import bisect_right, bisect_left
 
 def get_count(n, find, array):
     result = 0
@@ -35,20 +36,22 @@ def get_count(n, find, array):
     return result
 
 
-def answer_get_count():
+def answer_get_count(n, find, array):
     result = 0
     # answer here
+    r = bisect_right(array, find)
+    l = bisect_left(array, find)
 
-    return result
+    return r - l
 
 
 if __name__ == '__main__':
     start = time.time()
-    print(get_count(7, 9, [1, 1, 2, 2, 2, 2, 3]))
+    print(get_count(7, 2, [1, 1, 2, 2, 2, 2, 3]))
     print(f"{time.time() - start:.10f} sec")
 
     start = time.time()
-    print(answer_get_count())
+    print(answer_get_count(7, 2, [1, 1, 2, 2, 2, 2, 3]))
     print(f"{time.time() - start:.10f} sec")
 
 

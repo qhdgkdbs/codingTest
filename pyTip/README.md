@@ -122,6 +122,9 @@ print(x)        # 전역 변수 출력
 
 
 
+
+
+<span sytle="color: tomato"></span>
 <pre><code>
 
 </code></pre>

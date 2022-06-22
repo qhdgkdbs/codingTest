@@ -1,14 +1,19 @@
 import time
 
-def up_to_down(arr):
+def grade_low_top(data):
     result = 0
     # solve here
-    arr = sorted(arr[1:], reverse=1)
+    r = [row.split() for row in data.split('/')]
+    del r[0]
 
-    return arr
+    n = sorted(r, key=lambda x: int(x[1]))
+
+    name = [row[0] for row in n]
+
+    return name
 
 
-def answer_up_to_down():
+def answer_grade_low_top(data):
     result = 0
     # answer here
 
@@ -17,11 +22,11 @@ def answer_up_to_down():
 
 if __name__ == '__main__':
     start = time.time()
-    print(up_to_down([3, 15, 27, 12]))
+    print(grade_low_top('2/홍길동 95/이순신 77'))
     print(f"{time.time() - start:.10f} sec")
 
     start = time.time()
-    print(answer_up_to_down())
+    print(answer_grade_low_top('2/홍길동 95/이순신 77'))
     print(f"{time.time() - start:.10f} sec")
 
 

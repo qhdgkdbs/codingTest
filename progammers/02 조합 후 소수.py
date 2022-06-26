@@ -1,5 +1,4 @@
 import itertools
-import math
 
 
 def is_prime_number(x):

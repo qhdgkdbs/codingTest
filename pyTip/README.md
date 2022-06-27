@@ -121,7 +121,10 @@ print(x)        # 전역 변수 출력
 </code></pre>
 
 
-
+### 문자열 뒤집기
+```
+string[::-1] # iter에서 사용가능
+```
 
 
 <span sytle="color: tomato"></span>

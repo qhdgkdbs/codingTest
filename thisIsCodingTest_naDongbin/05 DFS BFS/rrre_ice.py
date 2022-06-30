@@ -24,7 +24,7 @@ def dfs(i, j):
 answer = 0
 for i in range(n):
     for j in range(m):
-        if dfs(i,j):
+        if dfs(i, j):
             answer += 1
 
 print(answer)

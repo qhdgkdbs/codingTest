@@ -22,3 +22,13 @@ print(bisect_right(a, x))  #4
 * 최적화 문제를 결정 문제(에스 오알 낫)으로 바꾸어 해결하는 방법
   * 특정한 조건을 만족하는 가장 알맞은 값을 빠르게 찾는 최적화 문제
 * 일반적으로 코딩 테스트에서의 파라케트릭 서치 문제는 이진 탐색을 이용하여 해결할 수 있음
+
+
+### bisect_left로 이진 탐색하기
+<pre><code>
+def binsearch(l,e):
+    index = bisect_left(l, e)
+    if index == len(l) or l[index] != e:
+        return False
+    return index
+</code></pre>
